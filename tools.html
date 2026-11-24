@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en-ZA" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lighting Calculators &amp; Tools | Fan Size, Lumens, Kelvin, IP Ratings · The Lighting Warehouse</title>
+<meta name="description" content="Free lighting tools from The Lighting Warehouse: ceiling fan size calculator, lumen calculator, colour temperature slider, load-shedding light finder, globe fitting finder and an interactive IP rating explainer.">
+<meta property="og:title" content="Lighting Calculators &amp; Tools | Fan Size, Lumens, Kelvin, IP Ratings · The Lighting Warehouse">
+<meta property="og:description" content="Free lighting tools from The Lighting Warehouse: ceiling fan size calculator, lumen calculator, colour temperature slider, load-shedding light finder, globe fitting finder and an interactive IP rating explainer.">
+<meta property="og:image" content="assets/img/tlw-logo.png">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="icon" href="assets/img/tlw-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://lightingwarehouse.co.za">
+<link rel="stylesheet" href="assets/css/tlw.css">
+<link rel="stylesheet" href="assets/css/explore.css">
+<script>try{var t=localStorage.getItem("tlw-theme");if(t)document.documentElement.dataset.theme=JSON.parse(t)}catch(e){}</script>
+</head>
+<body data-page="tools">
+<main id="main">
+
+<section class="tl-head" data-lamp-host aria-labelledby="tlH">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span>Tools</nav>
+    <div class="tl-head-grid">
+      <div>
+        <span class="num">— Six tools · free · no sign-up</span>
+        <h1 class="mt-s" id="tlH" data-lines>The lighting<br><em>toolbox.</em></h1>
+      </div>
+      <div>
+        <p class="lead">The rules of thumb our staff use on the showroom floor, turned into calculators. Measure the room, move a slider, and see the real products that fit.</p>
+        <ul class="tl-specs mt-m">
+          <li><span>Lumen targets</span><span>50 – 500 lm per m²</span></li>
+          <li><span>Fan sizes</span><span>760 – 1820 mm blades</span></li>
+          <li><span>Colour range</span><span>2700K – 6500K</span></li>
+          <li><span>Products</span><span>Live from our range</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap tl-layout">
+  <nav class="tl-index" aria-label="Tools on this page">
+    <ol>
+      <li><a href="#fan"><span class="num">01</span>Fan size</a></li>
+      <li><a href="#lumen"><span class="num">02</span>Lumens</a></li>
+      <li><a href="#kelvin"><span class="num">03</span>Colour temperature</a></li>
+      <li><a href="#loadshedding"><span class="num">04</span>Load-shedding</a></li>
+      <li><a href="#globe"><span class="num">05</span>Globe finder</a></li>
+      <li><a href="#ip"><span class="num">06</span>IP ratings</a></li>
+    </ol>
+  </nav>
+
+  <div class="tl-tools">
+
+    <!-- 01 FAN -->
+    <section class="tl-tool" id="fan" aria-labelledby="fanH">
+      <div class="tl-th"><div><span class="num">— 01 / Fan size calculator</span><h2 id="fanH">How big should your <em>fan</em> be?</h2></div><p>Blade span is the diameter from tip to tip. Too small and it spins flat out without cooling the corners; too big and it feels like a helicopter.</p></div>
+      <div class="tl-bench">
+        <div class="tl-ctrl">
+          <div class="tl-field"><div class="row-b"><label for="fanL">Room length</label><output for="fanL" id="fanLo">5 m</output></div><input class="rng" type="range" id="fanL" min="2" max="12" step="0.5" value="5"></div>
+          <div class="tl-field"><div class="row-b"><label for="fanW">Room width</label><output for="fanW" id="fanWo">4 m</output></div><input class="rng" type="range" id="fanW" min="2" max="12" step="0.5" value="4"></div>
+          <div class="tl-field"><span class="tl-lbl" id="fanCl">Ceiling height</span><div class="seg mt-s" role="group" aria-labelledby="fanCl" data-seg="fanC"><button type="button" aria-pressed="true" data-v="2.4">2.4 m</button><button type="button" aria-pressed="false" data-v="2.7">2.7 m</button><button type="button" aria-pressed="false" data-v="3.2">3 m +</button></div></div>
+          <div class="tl-field"><span class="tl-lbl" id="fanKl">Light kit</span><div class="seg mt-s" role="group" aria-labelledby="fanKl" data-seg="fanK"><button type="button" aria-pressed="true" data-v="any">Either</button><button type="button" aria-pressed="false" data-v="with">With light</button><button type="button" aria-pressed="false" data-v="without">No light</button></div></div>
+        </div>
+        <div class="tl-out" aria-live="polite">
+          <span class="tl-res-lbl">Recommended blade span</span>
+          <div class="tl-big" id="fanOut">1520<small>mm</small></div>
+          <p id="fanTxt"></p>
+          <svg class="tl-diagram" id="fanSvg" viewBox="0 0 520 300" role="img" aria-label="Top view of the room with the fan to scale"></svg>
+          <p class="tl-tip" id="fanTip"></p>
+        </div>
+      </div>
+      <div class="tl-prod-h"><h3>Fans that <em>fit</em></h3><a class="link-u" href="shop.html?cat=fans">All fans →</a></div>
+      <div class="x-rail" id="fanProds"></div>
+    </section>
+
+    <!-- 02 LUMEN -->
+    <section class="tl-tool" id="lumen" aria-labelledby="lumH">
+      <div class="tl-th"><div><span class="num">— 02 / Lumen calculator</span><h2 id="lumH">How much <em>light</em> does the room need?</h2></div><p>Lumens measure how much light a globe gives, not how much power it uses. Forget watts: work out the lumens the room needs, then count the globes.</p></div>
+      <div class="tl-bench">
+        <div class="tl-ctrl">
+          <div class="field"><label for="lumRoom">Room</label><select id="lumRoom">
+            <option value="100,150">Lounge · 100–150 lm/m²</option><option value="100,150">Bedroom · 100–150 lm/m²</option><option value="150,250">Dining room · 150–250 lm/m²</option><option value="300,400" selected>Kitchen · 300–400 lm/m²</option><option value="200,300">Bathroom · 200–300 lm/m²</option><option value="300,500">Home office · 300–500 lm/m²</option><option value="50,100">Passage &amp; stairs · 50–100 lm/m²</option><option value="50,100">Patio &amp; stoep · 50–100 lm/m²</option></select></div>
+          <div class="tl-field"><div class="row-b"><label for="lumL">Length</label><output for="lumL" id="lumLo">4 m</output></div><input class="rng" type="range" id="lumL" min="1" max="12" step="0.5" value="4"></div>
+          <div class="tl-field"><div class="row-b"><label for="lumW">Width</label><output for="lumW" id="lumWo">3 m</output></div><input class="rng" type="range" id="lumW" min="1" max="12" step="0.5" value="3"></div>
+          <div class="tl-field"><span class="tl-lbl" id="lumGl">Count it in</span><div class="seg mt-s" role="group" aria-labelledby="lumGl" data-seg="lumG"><button type="button" aria-pressed="true" data-v="806">A60 globes · 806 lm</button><button type="button" aria-pressed="false" data-v="480">GU10 downlights · 480 lm</button><button type="button" aria-pressed="false" data-v="470">Candles · 470 lm</button></div></div>
+        </div>
+        <div class="tl-out" aria-live="polite">
+          <span class="tl-res-lbl">Light needed</span>
+          <div class="tl-big" id="lumOut">3,600<small>lm</small></div>
+          <p id="lumTxt"></p>
+          <div class="tl-dots" id="lumDots" aria-hidden="true"></div>
+          <p class="tl-tip" id="lumTip"></p>
+        </div>
+      </div>
+      <div class="tl-prod-h"><h3>Globes for the <em>job</em></h3><a class="link-u" href="shop.html?cat=globes">All globes →</a></div>
+      <div class="x-rail" id="lumProds"></div>
+    </section>
+
+    <!-- 03 KELVIN -->
+    <section class="tl-tool" id="kelvin" aria-labelledby="kelH">
+      <div class="tl-th"><div><span class="num">— 03 / Colour temperature</span><h2 id="kelH">Warm white or <em>daylight?</em></h2></div><p>The same room, the same lights, a different globe. Drag the slider from candle-warm 2700K to crisp 6500K daylight and see how the mood changes.</p></div>
+      <div class="seg" role="group" aria-label="Room" data-seg="kRoom" style="margin-bottom:18px">
+        <button type="button" aria-pressed="true" data-v="lounge">Lounge</button><button type="button" aria-pressed="false" data-v="dining">Kitchen &amp; dining</button><button type="button" aria-pressed="false" data-v="bedroom">Bedroom</button><button type="button" aria-pressed="false" data-v="patio">Patio</button>
+      </div>
+      <div class="tl-kbench">
+        <div>
+          <div class="tl-kv" id="kView"><img id="kImg" alt="A room lit by The Lighting Warehouse, recoloured to the selected colour temperature"><div class="tint" id="kTint"></div><div class="tint2" id="kTint2"></div><div class="read"><b id="kRead">2700K</b><span id="kName">Warm white</span></div></div>
+          <div class="tl-field mt-s"><label class="sr-only" for="kRange">Colour temperature in kelvin</label><input class="rng" type="range" id="kRange" min="2700" max="6500" step="100" value="2700"><div class="tl-kscale" aria-hidden="true"></div><div class="row-b x-hint mt-s"><span>2700K · candle-warm</span><span>6500K · daylight</span></div></div>
+        </div>
+        <div class="tl-out tl-kadvice" aria-live="polite">
+          <span class="tl-res-lbl" id="kRoomLbl">Lounge</span>
+          <h4 id="kVerdict"></h4>
+          <p id="kAdvice"></p>
+          <table class="tl-ktable"><caption class="sr-only">Colour temperature guide</caption><tbody id="kTable"></tbody></table>
+        </div>
+      </div>
+      <div class="tl-prod-h"><h3 id="kProdH">Globes at this <em>colour</em></h3><a class="link-u" href="shop.html?cat=globes">All globes →</a></div>
+      <div class="x-rail" id="kProds"></div>
+    </section>
+
+    <!-- 04 LOAD-SHEDDING -->
+    <section class="tl-tool" id="loadshedding" aria-labelledby="lsH">
+      <div class="tl-th"><div><span class="num">— 04 / Load-shedding light finder</span><h2 id="lsH">Never sit in the <em>dark</em> again.</h2></div><p>Tell us where you need light and for how long. We'll match emergency globes and solar lights from our range, and tell you honestly what each can and can't do.</p></div>
+      <div class="tl-bench">
+        <div class="tl-ctrl">
+          <div class="tl-field"><span class="tl-lbl" id="lsWl">Where</span><div class="seg mt-s" role="group" aria-labelledby="lsWl" data-seg="lsW"><button type="button" aria-pressed="true" data-v="in">Indoors</button><button type="button" aria-pressed="false" data-v="out">Outdoors</button></div></div>
+          <div class="tl-field"><div class="row-b"><label for="lsH2">Hours without power</label><output for="lsH2" id="lsHo">4 h</output></div><input class="rng" type="range" id="lsH2" min="2" max="12" step="1" value="4"></div>
+          <div class="tl-field" data-for="in"><div class="row-b"><label for="lsN">Rooms to keep lit</label><output for="lsN" id="lsNo">3</output></div><input class="rng" type="range" id="lsN" min="1" max="10" step="1" value="3"></div>
+          <div class="tl-field" data-for="in"><span class="tl-lbl" id="lsFl">Your light fittings</span><div class="seg mt-s" role="group" aria-labelledby="lsFl" data-seg="lsF"><button type="button" aria-pressed="true" data-v="E27">Screw (E27)</button><button type="button" aria-pressed="false" data-v="B22">Bayonet (B22)</button></div></div>
+          <div class="tl-field" data-for="out" hidden><span class="tl-lbl" id="lsOl">What for</span><div class="seg mt-s" role="group" aria-labelledby="lsOl" data-seg="lsO"><button type="button" aria-pressed="true" data-v="sec">Security</button><button type="button" aria-pressed="false" data-v="path">Paths &amp; garden</button><button type="button" aria-pressed="false" data-v="drive">Driveway &amp; yard</button></div></div>
+        </div>
+        <div class="tl-out" aria-live="polite">
+          <span class="tl-res-lbl">Your backup plan</span>
+          <div class="tl-big" id="lsOut">3<small>emergency globes</small></div>
+          <p id="lsTxt"></p>
+          <svg class="tl-diagram" id="lsSvg" viewBox="0 0 520 110" role="img" aria-label="Timeline of how long each light source lasts"></svg>
+          <p class="tl-tip" id="lsTip"></p>
+        </div>
+      </div>
+      <div class="tl-prod-h"><h3>Load-shedding <em>ready</em></h3><a class="link-u" href="shop.html?q=loadshedding">See all →</a></div>
+      <div class="x-rail" id="lsProds"></div>
+    </section>
+
+    <!-- 05 GLOBE -->
+    <section class="tl-tool" id="globe" aria-labelledby="glH">
+      <div class="tl-th"><div><span class="num">— 05 / Globe finder</span><h2 id="glH">Which globe <em>fits?</em></h2></div><p>Take the old globe out and look at the end that goes into the fitting. Match its shape below and we'll show you every globe in our range that fits.</p></div>
+      <div class="tl-caps" role="group" aria-label="Choose your fitting" id="glCaps"></div>
+      <div class="tl-bench" style="margin-top:16px">
+        <div class="tl-ctrl">
+          <div class="tl-field"><span class="tl-lbl" id="glKl">Light colour</span><div class="seg mt-s" role="group" aria-labelledby="glKl" data-seg="glK"><button type="button" aria-pressed="true" data-v="all">All</button><button type="button" aria-pressed="false" data-v="warm">Warm white</button><button type="button" aria-pressed="false" data-v="cool">Cool white</button><button type="button" aria-pressed="false" data-v="day">Daylight</button></div></div>
+          <div class="tl-field"><span class="tl-lbl" id="glSl">Type</span><div class="seg mt-s" role="group" aria-labelledby="glSl" data-seg="glS"><button type="button" aria-pressed="true" data-v="all">All</button><button type="button" aria-pressed="false" data-v="std">Everyday LED</button><button type="button" aria-pressed="false" data-v="fil">Decorative filament</button><button type="button" aria-pressed="false" data-v="dim">Dimmable</button></div></div>
+        </div>
+        <div class="tl-out" aria-live="polite">
+          <span class="tl-res-lbl" id="glLbl">E27 · Edison screw</span>
+          <div class="tl-big" id="glOut">0<small>globes fit</small></div>
+          <p id="glTxt"></p>
+        </div>
+      </div>
+      <div class="tl-prod-h"><h3>Globes that <em>fit</em></h3><a class="link-u" href="shop.html?cat=globes">All globes →</a></div>
+      <div class="x-rail" id="glProds"></div>
+    </section>
+
+    <!-- 06 IP -->
+    <section class="tl-tool" id="ip" aria-labelledby="ipH">
+      <div class="tl-th"><div><span class="num">— 06 / IP rating explainer</span><h2 id="ipH">Safe near <em>water.</em></h2></div><p>IP ratings tell you how well a light keeps out dust and water. Tap a zone in the bathroom or around the house to see the rating you need there.</p></div>
+      <div class="seg" role="group" aria-label="Area" data-seg="ipA" style="margin-bottom:18px"><button type="button" aria-pressed="true" data-v="bath">Bathroom</button><button type="button" aria-pressed="false" data-v="out">Outdoors</button></div>
+      <div class="tl-ipwrap">
+        <div class="tl-out" style="padding:clamp(12px,2vw,24px)">
+          <svg class="tl-ipsvg" id="ipBath" viewBox="0 0 600 380" role="group" aria-label="Bathroom zones, side view">
+            <line class="ln" x1="20" y1="340" x2="590" y2="340"/><line class="ln" x1="40" y1="30" x2="40" y2="340"/>
+            <path class="fx" d="M58 268h246v10c0 34-20 58-50 62H108c-30-4-50-28-50-62z"/>
+            <path class="fx" d="M70 70v-28h40M110 42v10M98 52h24l-4 8h-16z"/>
+            <path class="fx" d="M470 250h80v20h-80zM478 270h64l-6 50h-52z"/>
+            <line class="ln" x1="300" y1="350" x2="300" y2="364"/><line class="ln" x1="390" y1="350" x2="390" y2="364"/><text class="tx" x="345" y="376" text-anchor="middle">0.6 M</text>
+            <line class="ln" x1="28" y1="60" x2="28" y2="340" stroke-dasharray="3 4"/><text class="tx" x="24" y="200" text-anchor="middle" transform="rotate(-90 24 200)">2.25 M</text>
+            <g class="zone" tabindex="0" role="button" data-z="b0" aria-label="Zone 0: inside the bath or shower"><path d="M62 280h238c0 30-18 52-46 56H108c-28-4-46-26-46-56z"/><text x="180" y="318" text-anchor="middle">0</text></g>
+            <g class="zone" tabindex="0" role="button" data-z="b1" aria-label="Zone 1: above the bath up to 2.25 metres"><rect x="58" y="60" width="244" height="206"/><text x="180" y="170" text-anchor="middle">1</text></g>
+            <g class="zone" tabindex="0" role="button" data-z="b2" aria-label="Zone 2: within 0.6 metres of the bath"><rect x="304" y="60" width="86" height="278"/><text x="347" y="200" text-anchor="middle">2</text></g>
+            <g class="zone" tabindex="0" role="button" data-z="bx" aria-label="Outside the zones"><rect x="392" y="40" width="190" height="200"/><text x="487" y="146" text-anchor="middle">Outside</text></g>
+          </svg>
+          <svg class="tl-ipsvg" id="ipOut" viewBox="0 0 600 380" role="group" aria-label="Outdoor areas around a house, side view" hidden>
+            <line class="ln" x1="10" y1="320" x2="590" y2="320"/>
+            <path class="fx" d="M40 320V130l110-70 110 70v190"/><path class="fx" d="M260 150h170v14H260"/><line class="fx" x1="420" y1="164" x2="420" y2="320"/>
+            <path class="fx" d="M90 320v-70h40v70M180 200h50v40h-50z"/>
+            <path class="fx" d="M470 320c0-6 2-10 6-10h104"/><path class="fx" d="M486 336h96" stroke-dasharray="6 6"/>
+            <path class="fx" d="M500 300c0-30 10-50 0-80M520 300c6-26 20-40 14-70" opacity=".6"/>
+            <g class="zone" tabindex="0" role="button" data-z="o1" aria-label="Covered patio under the roof"><rect x="264" y="168" width="152" height="148"/><text x="340" y="250" text-anchor="middle">Covered patio</text></g>
+            <g class="zone" tabindex="0" role="button" data-z="o2" aria-label="Exposed outside wall"><rect x="44" y="140" width="212" height="100"/><text x="150" y="178" text-anchor="middle">Exposed wall</text></g>
+            <g class="zone" tabindex="0" role="button" data-z="o3" aria-label="Garden, paths and in-ground lights"><rect x="430" y="210" width="160" height="106"/><text x="510" y="200" text-anchor="middle">Garden</text></g>
+            <g class="zone" tabindex="0" role="button" data-z="o4" aria-label="Pool and pond"><rect x="476" y="324" width="114" height="42"/><text x="533" y="352" text-anchor="middle">Pool</text></g>
+            <g class="zone" tabindex="0" role="button" data-z="o5" aria-label="Driveway and security floodlights"><rect x="44" y="246" width="212" height="70"/><text x="150" y="288" text-anchor="middle">Driveway &amp; floods</text></g>
+          </svg>
+        </div>
+        <div class="tl-out" aria-live="polite">
+          <span class="tl-res-lbl" id="ipZone">Zone 1 · above the bath</span>
+          <div class="tl-ipcode" id="ipCode">IP65</div>
+          <p id="ipTxt"></p>
+          <div class="tl-ipdigits"><div><b id="ipD1">6</b><span id="ipD1t"></span></div><div><b id="ipD2">5</b><span id="ipD2t"></span></div></div>
+        </div>
+      </div>
+      <div class="tl-prod-h"><h3 id="ipProdH">Rated for this <em>zone</em></h3><a class="link-u" href="shop.html?cat=outdoor" id="ipAll">See all →</a></div>
+      <div class="x-rail" id="ipProds"></div>
+      <p class="demo-note mt-m">Guidance based on common bathroom zone practice. Electrical work in wet areas must be done by a registered electrician, who will issue a Certificate of Compliance.</p>
+    </section>
+
+  </div>
+</div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="assets/js/data-static.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/chat.js"></script>
+<script src="assets/js/tools.js"></script>
+</body>
+</html>

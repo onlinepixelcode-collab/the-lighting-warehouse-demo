@@ -1,0 +1,16 @@
+{
+  "name": "tlw-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The Lighting Warehouse — premium demo website by Pixel Code",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.13.0"
+  }
+}

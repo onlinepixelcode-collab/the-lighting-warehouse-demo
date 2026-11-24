@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en-ZA" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Checkout | The Lighting Warehouse</title>
+<meta name="description" content="Secure one-page checkout at The Lighting Warehouse. Courier delivery nationwide, free over R500, or click and collect at one of our 12 stores. Pay by card, EFT or Payflex.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="icon" href="assets/img/tlw-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://lightingwarehouse.co.za">
+<link rel="stylesheet" href="assets/css/tlw.css">
+<link rel="stylesheet" href="assets/css/service.css">
+<script>try{var t=localStorage.getItem("tlw-theme");if(t)document.documentElement.dataset.theme=JSON.parse(t)}catch(e){}</script>
+</head>
+<body data-page="checkout">
+<main id="main">
+
+<div id="coFlow">
+<section class="co-head" data-lamp-host aria-labelledby="coH">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><button type="button" data-open="bag" style="font:inherit;letter-spacing:inherit;text-transform:inherit;color:inherit">Bag</button><span>/</span><b aria-current="page">Checkout</b></nav>
+    <h1 id="coH" data-lines>Almost<br><em>lit.</em></h1>
+    <p class="demo-note">Demo checkout: no payment is taken</p>
+    <ol class="co-meter" id="coMeter" aria-label="Checkout progress">
+      <li class="on"><span class="dot"></span><b>01</b>Details</li>
+      <li><span class="dot"></span><b>02</b>Delivery</li>
+      <li><span class="dot"></span><b>03</b>Payment</li>
+      <li><span class="dot"></span><b>04</b>Confirm</li>
+    </ol>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="co-grid">
+    <form class="co-form" id="coForm" novalidate>
+
+      <!-- 01 DETAILS -->
+      <fieldset class="co-step open" data-step="0" style="border-left:0;border-right:0;margin:0;min-width:0"><legend class="sr-only">Your details</legend>
+        <button type="button" class="co-step-h" aria-expanded="true" aria-controls="coB0">
+          <span class="n" aria-hidden="true">01</span>
+          <span><span class="t">Your details</span><span class="sum" data-sum></span></span>
+          <span class="edit">Edit</span>
+        </button>
+        <div class="co-step-b" id="coB0">
+          <p class="mute" style="margin-bottom:22px">Checking out as a guest. Have an account? <a class="link-u" href="account.html" style="min-height:0">Sign in</a></p>
+          <div class="co-fields">
+            <div class="field full"><label for="cEmail">Email</label><input id="cEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.co.za"></div>
+            <div class="field"><label for="cFirst">First name</label><input id="cFirst" name="first" autocomplete="given-name" required></div>
+            <div class="field"><label for="cLast">Surname</label><input id="cLast" name="last" autocomplete="family-name" required></div>
+            <div class="field full"><label for="cPhone">Mobile (for WhatsApp delivery updates)</label><input id="cPhone" name="phone" type="tel" autocomplete="tel" required inputmode="tel" minlength="9" placeholder="082 000 0000"></div>
+            <label class="check full"><input type="checkbox" name="account" id="cAcc"> Create an account so I can track orders and reorder in one tap</label>
+            <p class="full mute" id="cAccNote" hidden style="margin:-8px 0 0;font-size:15px">We'll email you a link to set your password after the order is placed. Nothing else to fill in now.</p>
+            <label class="check full"><input type="checkbox" name="news" checked> Send me Black Friday early access and new ranges (unsubscribe anytime)</label>
+          </div>
+          <div class="co-next"><button type="button" class="btn" data-next>Continue to delivery <span class="arr">→</span></button></div>
+        </div>
+      </fieldset>
+
+      <!-- 02 DELIVERY -->
+      <fieldset class="co-step locked" data-step="1" style="border-left:0;border-right:0;margin:0;min-width:0"><legend class="sr-only">Delivery</legend>
+        <button type="button" class="co-step-h" aria-expanded="false" aria-controls="coB1">
+          <span class="n" aria-hidden="true">02</span>
+          <span><span class="t">Delivery</span><span class="sum" data-sum></span></span>
+          <span class="edit">Edit</span>
+        </button>
+        <div class="co-step-b" id="coB1">
+          <div class="co-opts" role="radiogroup" aria-label="Delivery method">
+            <label class="opt"><input type="radio" name="method" value="courier" checked><span><b>Courier to your door</b><small>Nationwide, tracked, with email and WhatsApp updates at every step.</small></span><span class="tagline" id="feeTag">R150.00</span></label>
+            <label class="opt"><input type="radio" name="method" value="collect"><span><b>Click &amp; collect at a store</b><small>Choose one of our 12 stores. We'll message you when it's packed and waiting.</small></span><span class="tagline">Free</span></label>
+          </div>
+
+          <div class="co-sub" id="subCourier">
+            <div class="co-fields">
+              <div class="field full"><label for="cAddr">Street address</label><input id="cAddr" name="addr" autocomplete="address-line1" required placeholder="12 Jacaranda Avenue"></div>
+              <div class="field"><label for="cSuburb">Suburb</label><input id="cSuburb" name="suburb" autocomplete="address-level3" required></div>
+              <div class="field"><label for="cCity">City / town</label><input id="cCity" name="city" autocomplete="address-level2" required></div>
+              <div class="field"><label for="cProv">Province</label>
+                <select id="cProv" name="prov" required>
+                  <option value="">Choose…</option><option>Gauteng</option><option>KwaZulu-Natal</option><option>Western Cape</option><option>Eastern Cape</option><option>Free State</option><option>Mpumalanga</option><option>Limpopo</option><option>North West</option><option>Northern Cape</option>
+                </select></div>
+              <div class="field"><label for="cPost">Postal code</label><input id="cPost" name="post" autocomplete="postal-code" required inputmode="numeric" pattern="[0-9]{4}" maxlength="4"></div>
+            </div>
+            <p class="co-eta" id="coEta" aria-live="polite">Choose your province to see an estimated delivery date.</p>
+          </div>
+
+          <div class="co-sub" id="subCollect" hidden>
+            <div class="field"><label for="cStore">Collect from</label><select id="cStore" name="store"></select></div>
+            <div id="storeInfo" class="mt-s" style="font-size:15px"></div>
+            <p class="co-eta">Usually ready within 1 working day. Bring your order number and ID.</p>
+          </div>
+
+          <div class="co-next"><button type="button" class="btn" data-next>Continue to payment <span class="arr">→</span></button><button type="button" class="link-u" data-back>Back</button></div>
+        </div>
+      </fieldset>
+
+      <!-- 03 PAYMENT -->
+      <fieldset class="co-step locked" data-step="2" style="border-left:0;border-right:0;margin:0;min-width:0"><legend class="sr-only">Payment</legend>
+        <button type="button" class="co-step-h" aria-expanded="false" aria-controls="coB2">
+          <span class="n" aria-hidden="true">03</span>
+          <span><span class="t">Payment</span><span class="sum" data-sum></span></span>
+          <span class="edit">Edit</span>
+        </button>
+        <div class="co-step-b" id="coB2">
+          <div class="co-opts" role="radiogroup" aria-label="Payment method">
+            <label class="opt"><input type="radio" name="pay" value="card" checked><span><b>Card</b><small>Visa or Mastercard, paid on our payment partner's secure page.</small></span><span class="tagline">Instant</span></label>
+            <label class="opt"><input type="radio" name="pay" value="eft"><span><b>EFT</b><small>Pay from your banking app. We ship once the funds reflect.</small></span><span class="tagline">1–2 days</span></label>
+            <label class="opt"><input type="radio" name="pay" value="payflex"><span><b>Payflex</b><small id="payflexTxt">Four interest-free payments, every two weeks.</small></span><span class="tagline">0% interest</span></label>
+          </div>
+          <div class="co-sub" id="payNote" aria-live="polite"></div>
+          <div class="co-next"><button type="button" class="btn" data-next>Review order <span class="arr">→</span></button><button type="button" class="link-u" data-back>Back</button></div>
+        </div>
+      </fieldset>
+
+      <!-- 04 CONFIRM -->
+      <fieldset class="co-step locked" data-step="3" style="border-left:0;border-right:0;margin:0;min-width:0"><legend class="sr-only">Confirm</legend>
+        <button type="button" class="co-step-h" aria-expanded="false" aria-controls="coB3">
+          <span class="n" aria-hidden="true">04</span>
+          <span><span class="t">Confirm</span><span class="sum" data-sum></span></span>
+          <span class="edit">Edit</span>
+        </button>
+        <div class="co-step-b" id="coB3">
+          <dl class="co-review" id="coReview"></dl>
+          <label class="check mt-m"><input type="checkbox" id="cTerms" required> I agree to the terms of sale and the <a href="privacy.html" style="color:var(--amber);margin-left:4px">privacy policy</a></label>
+          <p class="sv-err" id="coErr" role="alert"></p>
+          <div class="co-next"><button type="submit" class="btn co-place" id="coPlace">Place order</button><button type="button" class="link-u" data-back>Back</button></div>
+          <p class="demo-note mt-s">Demo checkout: no payment is taken and no order is sent</p>
+        </div>
+      </fieldset>
+    </form>
+
+    <aside class="co-receipt" aria-labelledby="rcH">
+      <div class="row-b"><h2 id="rcH">Your order</h2><button type="button" class="link-u" data-open="bag">Edit bag</button></div>
+      <div class="co-ship" id="coShip"></div>
+      <div class="co-lines" id="coLines"></div>
+      <div class="co-tot" id="coTot"></div>
+      <div class="co-fragile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5v-9Z"/><path d="M3 7.5 12 12l9-4.5M12 12v9"/></svg><span><b style="color:var(--head)">Fragile glass items are double-boxed.</b> Every pendant shade and globe is wrapped, boxed, then boxed again before it leaves us.</span></div>
+      <div class="co-trust"><span>Free delivery over R500</span><span>12 stores</span><span>Since 1974</span></div>
+    </aside>
+  </div>
+</div>
+</div>
+
+<section class="co-done" id="coDone" hidden aria-live="polite"></section>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="assets/js/data-static.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/chat.js"></script>
+<script src="assets/js/service.js"></script>
+</body>
+</html>
