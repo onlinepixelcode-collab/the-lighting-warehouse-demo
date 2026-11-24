@@ -141,6 +141,12 @@
       const list = P.filter(test); const p = (id && T.get(id)) || list[0]; if (!p) return "";
       return `<a class="cat" href="${href}" data-cursor="SHOP"><div class="pool"><img src="${esc(T.img(p))}" alt="${esc(name)}: ${esc(p.n)}" loading="lazy"></div><b>${esc(name)}</b><span>${list.length} products</span></a>`;
     }).join("");
+    if (hasGSAP && !T.reduced()) gsap.matchMedia().add("(max-width: 640px)", () => {
+      const row = $("#catGrid"); row.style.overflowX = "hidden";
+      const dist = () => Math.max(0, row.scrollWidth - row.clientWidth);
+      gsap.fromTo(row, { scrollLeft: 0 }, { scrollLeft: () => dist(), ease: "none", scrollTrigger: { trigger: ".cats", start: "top 80%", end: "bottom 20%", scrub: 0.6, invalidateOnRefresh: true } });
+      return () => { row.style.overflowX = ""; };
+    });
   }
 
   /* =============== [05] HOUSE AFTER DARK =============== */
@@ -183,7 +189,7 @@
     track.innerHTML = items.map(([p, tint], i) => `<a class="sig" href="${T.pUrl(p)}" data-tint="${tint}" data-cursor="VIEW"><span class="idx">0${i + 1}</span><div class="pool"><img src="${esc(T.img(p))}" alt="${esc(p.n)}" loading="lazy"></div><span class="sub">${esc(T.rangeOf(p))}</span><h3>${esc(p.n)}</h3><div class="row-b"><span class="price">${money(p.p)}</span><span class="link-u" style="min-height:0">View →</span></div></a>`).join("");
     const sec = $("#hgal"), tint = $(".tint", sec);
     // pin + sideways scroll on wide screens only; re-evaluated when the window is resized
-    if (hasGSAP && !T.reduced()) gsap.matchMedia().add("(min-width: 861px)", () => {
+    if (hasGSAP && !T.reduced()) gsap.matchMedia().add("(min-width: 0px)", () => {
       const dist = () => track.scrollWidth - innerWidth;
       gsap.to(track, { x: () => -dist(), ease: "none", scrollTrigger: { trigger: sec, start: "top top", end: () => "+=" + dist(), pin: true, scrub: 1, invalidateOnRefresh: true,
         onUpdate: (s) => { const i = Math.min(items.length - 1, Math.floor(s.progress * items.length)); tint.style.setProperty("--tint", items[i][1]); } } });

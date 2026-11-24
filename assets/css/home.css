@@ -118,7 +118,7 @@ body[data-page="home"] .header:not(.scrolled) { position: fixed; left: 0; right:
 .sig h3 { font-size: clamp(26px, 2.4vw, 36px); margin-top: 22px; }
 .sig .sub { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
 .sig .row-b { margin-top: 10px; }
-@media (max-width: 860px) { .hgal-track { width: auto; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; } .sig { scroll-snap-align: start; width: 74vw; } }
+@media (max-width: 860px) { .sig { width: 72vw; } }
 
 /* [07] Fan edit */
 .fan-split { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
@@ -357,3 +357,17 @@ html:not([data-theme="light"]) .nmap iframe { filter: invert(.9) hue-rotate(180d
 @media (max-width: 860px) { .sp { top: auto; left: 10px; right: 10px; bottom: 10px; width: auto; max-height: 75%; transform: translateY(calc(100% + 30px)); } }
 /* phones: two rooms per row, garden full-width at the end so patio and garage pair up with no gap */
 @media (max-width: 600px) { .room[data-room="garden"] { order: 10; } }
+
+/* phones: the signature gallery pins and glides sideways as you scroll, fitted to one screen */
+@media (max-width: 860px) {
+  .hgal { height: 100vh; height: 100svh; display: flex; flex-direction: column; }
+  .hgal-head { padding-top: calc(var(--header-h) + 16px); flex: none; }
+  .hgal-head .shead { margin-bottom: 0; gap: 6px; }
+  .hgal-head .shead .eyebrow { display: none; }
+  .hgal-head .h2 { font-size: clamp(34px, 9vw, 48px); }
+  .hgal-track { width: max-content; overflow: visible; flex: 1; min-height: 0; align-items: center; padding: 18px var(--gutter) 90px; gap: 18px; }
+  .sig { height: 100%; width: auto; display: flex; flex-direction: column; }
+  .sig .pool { height: calc(100% - 104px); width: auto; aspect-ratio: 4 / 5; flex: none; }
+  .sig h3 { font-size: 20px; margin-top: 12px; max-width: 26ch; }
+  .sig .idx { top: -18px; font-size: 48px; }
+}
